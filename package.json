@@ -1,0 +1,24 @@
+{
+  "name": "sensr",
+  "version": "1.0.0",
+  "description": "Sensr is a Python library for interacting with the Raspberry Pi Sense Hat.  It uses the joystick to show temperature, pressure, humidity, and magnetic north.",
+  "main": "Lights.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefreymaster/sensr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thefreymaster/sensr/issues"
+  },
+  "homepage": "https://github.com/thefreymaster/sensr#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.18.0",
+    "node-sense-hat": "0.0.2"
+  }
+}

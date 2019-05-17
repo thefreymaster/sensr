@@ -276,7 +276,7 @@ def getCurrentTemperature():
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(temperature, 0), determineEnglishDigit(temperature, 1), RED, BLACK))
     sense.set_pixel(0, 0, RED);
-    sleep(10)
+    sleep(2)
     sense.clear()
 
 
@@ -284,7 +284,7 @@ def getCurrentHumidity():
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(humidity, 0), determineEnglishDigit(humidity, 1), BLUE, BLACK))
     sense.set_pixel(1, 0, BLUE);
-    sleep(10)
+    sleep(2)
     sense.clear()
 
 
@@ -294,7 +294,7 @@ def getCurrentPressure():
     sense.set_pixel(2, 0, GREEN);
     sense.set_pixel(0, 6, GREEN);
     sense.set_pixel(1, 7, GREEN);
-    sleep(10)
+    sleep(2)
     sense.clear()
 
 

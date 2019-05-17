@@ -206,9 +206,10 @@ class Numbers:
 
 
 def determineEnglishDigit(number, digit):
-    print({"number": number});
-    print({"digit": digit});
+    print({"number": number})
+    print({"digit": digit})
     num = str(int(number))
+    print({"int": num})
     if num[digit] == "0":
         return Numbers.zero
     elif num[digit] == "1":
@@ -270,7 +271,7 @@ def convertTemp(temp):
 
 
 def convertPressureToPercent(pressure):
-    print({"raw_pressure": pressure});
+    print({"raw_pressure": pressure})
     press = (pressure/1080)*100
     return press
 
@@ -285,7 +286,7 @@ sense.clear()
 def getCurrentTemperature():
     print({"temperature": temperature})
     sense.set_pixels(combineDigitArrays(determineEnglishDigit(temperature, 0), determineEnglishDigit(temperature, 1), RED, BLACK))
-    sense.set_pixel(0, 0, RED);
+    sense.set_pixel(0, 0, RED)
     sleep(2)
     sense.clear()
 
@@ -293,7 +294,7 @@ def getCurrentTemperature():
 def getCurrentHumidity():
     print({"humidity": humidity})
     sense.set_pixels(combineDigitArrays(determineEnglishDigit(humidity, 0), determineEnglishDigit(humidity, 1), BLUE, BLACK))
-    sense.set_pixel(1, 0, BLUE);
+    sense.set_pixel(1, 0, BLUE)
     sleep(2)
     sense.clear()
 
@@ -301,9 +302,9 @@ def getCurrentHumidity():
 def getCurrentPressure():
     print({"Pressure": pressure})
     sense.set_pixels(combineDigitArrays(determineEnglishDigit(pressure, 0), determineEnglishDigit(pressure, 1), GREEN, BLACK))
-    sense.set_pixel(2, 0, GREEN);
-    sense.set_pixel(0, 6, GREEN);
-    sense.set_pixel(1, 7, GREEN);
+    sense.set_pixel(2, 0, GREEN)
+    sense.set_pixel(0, 6, GREEN)
+    sense.set_pixel(1, 7, GREEN)
     sleep(2)
     sense.clear()
 

@@ -1,12 +1,9 @@
 var express = require('express');
-var helmet = require('helmet');
 var sense = require("node-sense-hat")
 //All Sense Hat Constants
 const JoystickLib = sense.Joystick;
 
 const app = express()
-app.use(helmet());
-app.set('x-powered-by', 'Canvas 23 Studios');
 
 const colors = require('./constants/colors');
 const directions = require('./constants/directions');
@@ -20,7 +17,6 @@ let digitTwo = "";
 const port = 9700;
 var server = app.listen(process.env.PORT || port, function () {
     console.log('Running Express server on port: ' + port);
-
 });
 
 JoystickLib.getJoystick().then(joystick => {

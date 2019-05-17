@@ -1,5 +1,6 @@
 var express = require('express');
-var sense = require("node-sense-hat")
+const sense = require("node-sense-hat");
+
 //All Sense Hat Constants
 const JoystickLib = sense.Joystick;
 

@@ -18,6 +18,7 @@ digitTwo = ""
 
 ledArray = []
 
+
 class Directions:
     north = [
         0, 0, 0, 0, 1, 0, 0, 0,
@@ -99,6 +100,7 @@ class Directions:
         0, 0, 0, 0, 0, 0, 1, 0,
         0, 0, 0, 0, 0, 0, 0, 0,
     ]
+
 
 class Numbers:
     zero = [
@@ -202,6 +204,7 @@ class Numbers:
         0, 0, 0, 0,
     ]
 
+
 def determineEnglishDigit(number, digit):
     num = str(int(number))
     if num[digit] == "0":
@@ -224,6 +227,7 @@ def determineEnglishDigit(number, digit):
         return Numbers.eight
     elif num[digit] == "9":
         return Numbers.nine
+
 
 def combineDigitArrays(digitOneArray, digitTwoArray, OnColor, OffColor):
     i = 0
@@ -254,6 +258,7 @@ def translateDirectionToColors(direction, OnColor, OffColor):
         k += 1
     return ledArray
 
+
 def convertTemp(temp):
     tempF = (temp * 9 / 5) + 32
     if tempF >= 100:
@@ -263,8 +268,10 @@ def convertTemp(temp):
 
 
 def convertPressureToPercent(pressure):
+    print("Raw Pressure: " + pressure);
     press = (pressure/1080)*100
     return press
+
 
 temperature = convertTemp(sense.get_temperature())
 humidity = sense.get_humidity()
@@ -272,7 +279,9 @@ pressure = convertPressureToPercent(sense.get_pressure())
 
 sense.clear()
 
+
 def getCurrentTemperature():
+    print("Temperature: " % temperature)
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(temperature, 0), determineEnglishDigit(temperature, 1), RED, BLACK))
     sense.set_pixel(0, 0, RED);
@@ -281,6 +290,7 @@ def getCurrentTemperature():
 
 
 def getCurrentHumidity():
+    print("Humidity: " % humidity)
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(humidity, 0), determineEnglishDigit(humidity, 1), BLUE, BLACK))
     sense.set_pixel(1, 0, BLUE);
@@ -289,6 +299,7 @@ def getCurrentHumidity():
 
 
 def getCurrentPressure():
+    print("Pressure: " % pressure)
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(pressure, 0), determineEnglishDigit(pressure, 1), GREEN, BLACK))
     sense.set_pixel(2, 0, GREEN);

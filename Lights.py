@@ -343,7 +343,7 @@ while True:
             if event.direction == "left":
                 ledArray = []
                 getCurrentTemperature()
-            if event.direction == "up":
+            if event.direction == "down":
                 ledArray = []
                 getCurrentHumidity()
             if event.direction == "right":

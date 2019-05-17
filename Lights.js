@@ -20,9 +20,11 @@ let digitTwo = "";
 const port = 9700;
 var server = app.listen(process.env.PORT || port, function () {
     console.log('Running Express server on port: ' + port);
-    JoystickLib.getJoystick().then(joystick => {
-        console.log(joystick);
-    });
+
+});
+
+JoystickLib.getJoystick().then(joystick => {
+    console.log(joystick);
 });
 
 const determineEnglishDigit = (number, digit) => {

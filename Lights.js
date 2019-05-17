@@ -1,8 +1,8 @@
 var express = require('express');
 var helmet = require('helmet');
-
+var sense = require("node-sense-hat")
 //All Sense Hat Constants
-const JoystickLib = require("node-sense-hat").Joystick;
+const JoystickLib = sense.Joystick;
 
 const app = express()
 app.use(helmet());

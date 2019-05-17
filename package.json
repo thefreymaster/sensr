@@ -12,13 +12,8 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thefreymaster/sensr/issues"
-  },
-  "homepage": "https://github.com/thefreymaster/sensr#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "helmet": "^3.18.0",
     "node-sense-hat": "0.0.2"
   }
 }

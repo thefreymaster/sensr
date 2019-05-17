@@ -268,7 +268,7 @@ def convertTemp(temp):
 
 
 def convertPressureToPercent(pressure):
-    print("Raw Pressure: " + pressure);
+    print({"raw_pressure": pressure});
     press = (pressure/1080)*100
     return press
 
@@ -281,7 +281,7 @@ sense.clear()
 
 
 def getCurrentTemperature():
-    print("Temperature: " % temperature)
+    print({"temperature": temperature})
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(temperature, 0), determineEnglishDigit(temperature, 1), RED, BLACK))
     sense.set_pixel(0, 0, RED);
@@ -290,7 +290,7 @@ def getCurrentTemperature():
 
 
 def getCurrentHumidity():
-    print("Humidity: " % humidity)
+    print({"humidity": humidity})
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(humidity, 0), determineEnglishDigit(humidity, 1), BLUE, BLACK))
     sense.set_pixel(1, 0, BLUE);
@@ -299,7 +299,7 @@ def getCurrentHumidity():
 
 
 def getCurrentPressure():
-    print("Pressure: " % pressure)
+    print({"Pressure": pressure})
     sense.set_pixels(
         combineDigitArrays(determineEnglishDigit(pressure, 0), determineEnglishDigit(pressure, 1), GREEN, BLACK))
     sense.set_pixel(2, 0, GREEN);
